@@ -1,8 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* width */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-gray-200 rounded-md;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-md;
+  /* background: #888;  */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+  /* background: #555;  */
+}
 
 * {
   font-family: 'Quicksand', sans-serif;

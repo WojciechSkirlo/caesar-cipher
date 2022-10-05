@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js,vue}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'imperial': ['Imperial Script', 'cursive']
+      }
+    },
   },
   plugins: [],
 }
