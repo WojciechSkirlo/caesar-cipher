@@ -4,8 +4,13 @@
       <h1 class="mb-8 text-6xl text-center sm:text-7xl font-imperial">Caesar cipher</h1>
       <div class="flex w-full p-4 mx-auto bg-white border border-black rounded-lg">
         <form @submit.prevent="encrypt" class="flex w-full gap-5 sm:gap-8">
-          <div class="flex flex-col flex-1 gap-6">
-            <BaseTextarea v-model="vText" :id="1">Text to encrypt or decrypt</BaseTextarea>
+          <div class="flex flex-col flex-1">
+            <p class="mb-4 text-xs text-gray-500">
+              <span class="block font-semibold">Alphabet: </span>
+              a, ą, b, c, ć, d, e, ę, f, g, h, i, j, k, l, ł, m, n, ń, o, ó, p, q, r, s, ś, t, u, v, w, x, y,
+              z, ź, ż (35 chars)
+            </p>
+            <BaseTextarea v-model="vText" :id="1" class="mb-8">Text to encrypt or decrypt</BaseTextarea>
             <BaseTextarea v-model="vResult" :id="2" readonly>result</BaseTextarea>
           </div>
           <div class="flex flex-col justify-between gap-4">
@@ -283,4 +288,3 @@ const caesarCiper = (string: string, key: number, type: TypeCiper) => {
   }).join("");
 }
 </script>
-
