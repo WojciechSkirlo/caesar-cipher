@@ -4,7 +4,7 @@ import "./assets/main.css";
 
 const clickOutside = {
   beforeMount: (el: any, binding: any) => {
-    el.clickOutsideEvent = (event: any) => {
+    el.clickOutsideEvent = (event: Event) => {
       if (!(el == event.target || el.contains(event.target))) {
         binding.value();
       }
@@ -18,6 +18,5 @@ const clickOutside = {
 };
 
 const app = createApp(App);
-app.directive("click-outside", clickOutside)
+app.directive("click-outside", clickOutside);
 app.mount("#app");
-
